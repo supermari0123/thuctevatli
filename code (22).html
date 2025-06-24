@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại Toàn Thư Vật Lý Ứng Dụng & Thực Chiến (Phiên bản Hoàn Chỉnh)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #34495e;
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 25px auto;
+            background: #ffffff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .toc-container {
+            background: #eaf2f8;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid #d4e6f1;
+        }
+        .toc-container h2 {
+            margin-top: 0;
+            color: #2980b9;
+            text-align: center;
+        }
+        .toc-columns {
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+            column-gap: 30px;
+        }
+        .toc-columns ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            break-inside: avoid-column;
+        }
+        .toc-columns li { margin-bottom: 8px; }
+        .toc-columns li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        .toc-columns li a:hover { color: #3498db; }
+        .toc-section-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 12px;
+            color: #16a085;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        h1 { font-size: 2.8em; text-align: center; border-bottom: 4px solid #3498db; padding-bottom: 20px; margin-bottom: 40px;}
+        h2 { font-size: 2.1em; margin-top: 40px; border-bottom: 2px solid #2980b9; padding-bottom: 10px; }
+        h3 { font-size: 1.7em; margin-top: 25px; border-bottom: 1px solid #bdc3c7; padding-bottom: 8px; color: #16a085; }
+        h4 { font-size: 1.3em; color: #8e44ad; border-bottom: none; }
+        .formula-box, .model-box {
+            background-color: #fdfefe;
+            border: 1px solid #e5e8e8;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+        }
+        .model-box { background-color: #fef9e7; border-left-color: #f39c12; }
+        .step {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .step::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Đại Toàn Thư Vật Lý Ứng Dụng Thực Tế</h1>
+    
+    <div class="toc-container">
+        <h2>Mục Lục Toàn Diện</h2>
+        <div class="toc-columns">
+            <ul>
+                <li class="toc-section-title"><a href="#mo-hinh-dien-tu">I. Ứng Dụng Điện - Từ</a></li>
+                <li><a href="#mh-thietbidodien">1. Thiết bị đo điện</a></li>
+                <li><a href="#mh-candientu">2. Cân điện tử</a></li>
+                <li><a href="#mh-chuongdien">3. Chuông điện & Rơ le</a></li>
+                <li><a href="#mh-congtacdientu">4. Công tắc điện tử (Transistor)</a></li>
+                <li><a href="#mh-rolebaochay">5. Rơ le báo cháy</a></li>
+                <li><a href="#mh-thietbichongro">6. Thiết bị chống rò điện</a></li>
+                <li><a href="#mh-maybienap">7. Máy biến áp</a></li>
+                <li><a href="#mh-sackhongday">8. Sạc không dây</a></li>
+                <li><a href="#mh-dongcodien">9. Động cơ điện & Dynamo</a></li>
+                <li><a href="#mh-mayphatdien">10. Máy phát điện xoay chiều</a></li>
+                <li><a href="#mh-loa">11. Loa điện động</a></li>
+                <li><a href="#mh-danguitar">12. Đàn guitar điện</a></li>
+                <li><a href="#mh-phanhdientu">13. Phanh điện từ</a></li>
+                <li><a href="#mh-dokimloai">14. Thiết bị dò kim loại</a></li>
+                <li><a href="#mh-phanloaidongxu">15. Máy phân loại đồng xu</a></li>
+                <li><a href="#mh-sungdientu">16. Súng điện từ</a></li>
+                <li><a href="#mh-taudemtu">17. Tàu đệm từ (Maglev)</a></li>
+                <li><a href="#mh-giamchantubien">18. Giảm chấn từ biến</a></li>
+                <li><a href="#mh-thetu">19. Đầu đọc thẻ từ</a></li>
+                <li><a href="#mh-diathan">20. Đầu đọc đĩa than</a></li>
+            </ul>
+            <ul>
+                <li class="toc-section-title"><a href="#mo-hinh-hat-nhan">II. Ứng Dụng Hạt Nhân</a></li>
+                <li><a href="#mh-khoiphoke">1. Khối phổ kế</a></li>
+                <li><a href="#mh-cambienkhoi">2. Cảm biến khói Ion hóa</a></li>
+                <li><a href="#mh-danhdauphongxa">3. Chất đánh dấu phóng xạ</a></li>
+                <li><a href="#mh-cyclotron">4. Máy gia tốc Cyclotron</a></li>
+                <li><a href="#mh-lophannunghanhan">5. Lò phản ứng hạt nhân</a></li>
+                <li class="toc-section-title"><a href="#mo-hinh-nhiet-co">III. Ứng Dụng Nhiệt & Cơ</a></li>
+                <li><a href="#mh-bonnuocnong">1. Bồn nước nóng NLMT</a></li>
+                <li><a href="#mh-hethongNLMT">2. Hệ thống điện NLMT</a></li>
+                <li><a href="#mh-hethongthuydien">3. Hệ thống thủy điện</a></li>
+                <li><a href="#mh-maycatlaze">4. Máy cắt Laser</a></li>
+                <li><a href="#mh-dongconhiet">5. Động cơ nhiệt</a></li>
+                <li><a href="#mh-bannla">6. Bàn là (Bàn ủi)</a></li>
+                <li><a href="#mh-maysaychankhong">7. Máy sấy chân không</a></li>
+                <li><a href="#mh-chungcatnuoc">8. Chưng cất nước bằng NLMT</a></li>
+                <li><a href="#mh-chim-uong-nuoc">9. Đồ chơi chim uống nước</a></li>
+                <li><a href="#mh-tannhietCPU">10. Hệ thống tản nhiệt CPU</a></li>
+                <li><a href="#mh-mayhutam">11. Máy hút ẩm</a></li>
+                <li><a href="#mh-nhietkhi">12. Nhiệt kế khí & Bơm khí</a></li>
+                 <li><a href="#mh-dotocdongchay">13. Đo tốc độ dòng chảy</a></li>
+                <li><a href="#mh-giam-sat-ho-hap">14. Giám sát hô hấp</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <section id="mo-hinh-dien-tu">
+        <h2>I. Vật Lý Trong Thiết Bị Điện - Từ</h2>
+
+        <div class="model-box" id="mh-thietbidodien">
+            <h3>1. Thiết bị đo điện (Ampe kế, Vôn kế khung quay)</h3>
+            <p><strong>Nguyên lý:</strong> Lực từ tác dụng lên khung dây có dòng điện chạy qua, làm quay kim chỉ trên thang đo.</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step">Dòng điện cần đo được đưa vào một cuộn dây nhỏ, nhẹ, có thể quay quanh một trục trong từ trường của một nam châm vĩnh cửu.</div>
+            <div class="step">Lực từ tác dụng lên các cạnh của khung dây tạo ra một momen ngẫu lực làm quay cuộn dây. <code>(<strong>M</strong> = NI<strong>S</strong> x <strong>B</strong>)</code></div>
+            <div class="step">Một lò xo xoắn cản lại chuyển động quay này. Kim chỉ sẽ dừng lại ở vị trí mà momen của lực từ cân bằng với momen của lực đàn hồi lò xo. <code>(M<sub>từ</sub> = k&alpha;)</code></div>
+            <div class="step">Góc quay của kim tỉ lệ thuận với cường độ dòng điện. <code>(&alpha; ∝ I)</code></div>
+        </div>
+
+        <div class="model-box" id="mh-candientu">
+            <h3>2. Cân điện tử</h3>
+            <p><strong>Nguyên lý:</strong> Sử dụng cảm biến lực "load cell" hoạt động dựa trên sự thay đổi điện trở của vật liệu khi bị biến dạng (hiệu ứng áp trở).</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step">Vật được đặt lên bàn cân, gây ra một lực <code>P = mg</code> tác dụng lên một thanh kim loại (load cell).</div>
+            <div class="step">Lực này làm thanh kim loại bị uốn cong nhẹ. Trên thanh có dán các điện trở áp suất (strain gauge).</div>
+            <div class="step">Sự biến dạng làm thay đổi chiều dài và tiết diện của các điện trở này, dẫn đến sự thay đổi giá trị điện trở của chúng. <code>(&Delta;R/R = G.&epsilon;)</code> (G là hệ số, &epsilon; là độ biến dạng).</div>
+            <div class="step">Sự thay đổi điện trở này được đo bằng một mạch cầu điện tử, chuyển đổi thành tín hiệu điện áp, sau đó được khuếch đại và hiển thị thành con số khối lượng trên màn hình.</div>
+        </div>
+        
+        <div class="model-box" id="mh-chuongdien">
+            <h3>3. Chuông điện & Rơ le (Relay)</h3>
+            <p><strong>Nguyên lý:</strong> Tác dụng từ của dòng điện (nam châm điện).</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step"><strong>Chuông điện:</strong> Khi nhấn nút, mạch kín, dòng điện chạy qua cuộn dây, biến nó thành nam châm điện. Nam châm điện hút thanh sắt có gắn búa, làm búa đập vào chuông. Ngay khi thanh sắt bị hút, nó làm hở một tiếp điểm trong mạch, dòng điện bị ngắt. Nam châm điện mất từ tính, lò xo kéo thanh sắt trở lại, tiếp điểm đóng lại, và chu trình lặp lại, tạo ra tiếng chuông liên tục.</div>
+            <div class="step"><strong>Rơ le:</strong> Là một công tắc điều khiển bằng điện. Một dòng điện nhỏ chạy qua cuộn dây (mạch điều khiển) tạo ra từ trường, hút một thanh sắt để đóng hoặc ngắt một công tắc trong một mạch điện khác (mạch tải), thường là mạch có công suất lớn hơn nhiều.</div>
+        </div>
+        
+        <div class="model-box" id="mh-congtacdientu">
+            <h3>4. Công tắc điện tử (Transistor)</h3>
+            <p><strong>Nguyên lý:</strong> Dùng một dòng điện hoặc điện áp nhỏ ở một cực (cực Base) để điều khiển một dòng điện lớn hơn nhiều chạy qua hai cực còn lại (cực Collector và Emitter).</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step">Khi có một dòng điện nhỏ I<sub>B</sub> được đưa vào cực Base, nó cho phép một dòng điện lớn hơn nhiều I<sub>C</sub> chạy từ Collector sang Emitter.</div>
+            <div class="step">Quan hệ giữa chúng là <code>I<sub>C</sub> = &beta; * I<sub>B</sub></code>, với &beta; (hệ số khuếch đại) thường rất lớn.</div>
+            <div class="step">Bằng cách bật/tắt dòng I<sub>B</sub> rất nhỏ, ta có thể bật/tắt dòng I<sub>C</sub> rất lớn, hoạt động như một công tắc không có bộ phận cơ khí.</div>
+        </div>
+
+        <div class="model-box" id="mh-rolebaochay">
+            <h3>5. Rơ le báo cháy (dùng thanh lưỡng kim)</h3>
+            <p><strong>Nguyên lý:</strong> Sự dãn nở vì nhiệt khác nhau của hai kim loại.</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step">Một thanh lưỡng kim được cấu tạo từ hai lá kim loại có hệ số dãn nở vì nhiệt khác nhau (ví dụ: thép và đồng) được ghép chặt vào nhau.</div>
+            <div class="step">Ở nhiệt độ bình thường, thanh thẳng và làm hở một mạch điện của chuông báo.</div>
+            <div class="step">Khi có hỏa hoạn, nhiệt độ tăng cao. Do dãn nở khác nhau, thanh kim loại sẽ bị uốn cong về phía kim loại có hệ số dãn nở nhỏ hơn.</div>
+            <div class="step">Khi cong đủ, đầu thanh lưỡng kim sẽ chạm vào một tiếp điểm, làm đóng mạch điện và kích hoạt chuông báo động.</div>
+        </div>
+        
+        <div class="model-box" id="mh-thietbichongro">
+            <h3>6. Thiết bị chống rò điện (RCBO/ELCB)</h3>
+            <p><strong>Nguyên lý:</strong> Dựa trên định luật Kirchhoff về dòng điện - dòng đi vào phải bằng dòng đi ra.</p>
+            <h4>Cơ chế hoạt động</h4>
+            <div class="step">Thiết bị có một biến thế lõi xuyến. Dây "nóng" và dây "nguội" của mạch điện đều được luồn qua lõi này.</div>
+            <div class="step"><strong>Trạng thái bình thường:</strong> Dòng điện đi vào (I<sub>vào</sub>) bằng dòng điện đi ra (I<sub>ra</sub>). Hai dòng điện này ngược chiều nhau, tạo ra hai từ thông ngược chiều và triệt tiêu nhau trong lõi xuyến.</div>
+            <div class="step"><strong>Khi có rò điện:</strong> Một phần dòng điện đi qua người xuống đất. Lúc này <code>I<sub>vào</sub> > I<sub>ra</sub></code>.</div>
+            <div class="step">Sự chênh lệch này tạo ra một từ thông biến thiên khác 0 trong lõi xuyến, sinh ra một dòng điện cảm ứng trong một cuộn dây thứ cấp, kích hoạt rơ le ngắt mạch điện ngay lập tức.</div>
+        </div>
+
+        <div class="model-box" id="mh-maybienap">
+            <h3>7. Máy biến áp</h3>
+            <p><strong>Nguyên lý:</strong> Hiện tượng cảm ứng điện từ.</p>
+            <div class="step">Dòng điện xoay chiều vào cuộn sơ cấp (N₁ vòng) tạo từ thông biến thiên trong lõi thép.</div>
+            <div class="step">Từ thông này truyền qua cuộn thứ cấp (N₂ vòng), sinh ra suất điện động cảm ứng xoay chiều.</div>
+            <div class="formula-box">
+Tỉ số điện áp: U₁/U₂ &asymp; N₁/N₂
+Tỉ số dòng điện (lý tưởng): I₂/I₁ = N₁/N₂
+            </div>
+        </div>
+
+        <div class="model-box" id="mh-sackhongday">
+            <h3>8. Sạc không dây</h3>
+            <p><strong>Nguyên lý:</strong> Cảm ứng điện từ giữa hai cuộn dây không có lõi sắt.</p>
+            <div class="step"><strong>Bên đế sạc (sơ cấp):</strong> Cuộn dây phát được cấp dòng AC tần số cao, tạo từ trường biến thiên.</div>
+            <div class="step"><strong>Bên điện thoại (thứ cấp):</strong> Từ trường biến thiên xuyên qua cuộn dây thu, sinh ra suất điện động cảm ứng sạc pin.</div>
+        </div>
+        
+        <div class="model-box" id="mh-dongcodien">
+            <h3>9. Động cơ điện & Dynamo</h3>
+            <p><strong>Nguyên lý:</strong>
+            - **Động cơ điện:** Tác dụng của lực từ lên khung dây có dòng điện. (Điện năng &rarr; Cơ năng)
+            - **Dynamo (Máy phát điện một chiều):** Hiện tượng cảm ứng điện từ. (Cơ năng &rarr; Điện năng)</p>
+            <div class="step"><strong>Động cơ:</strong> Dòng điện chạy vào khung dây đặt trong từ trường. Lực từ tạo momen làm quay khung. Một bộ phận gọi là "cổ góp" sẽ đổi chiều dòng điện sau mỗi nửa vòng quay để khung tiếp tục quay theo một chiều.</div>
+            <div class="step"><strong>Dynamo:</strong> Quay một khung dây trong từ trường. Từ thông qua khung biến thiên, sinh ra suất điện động cảm ứng. Cổ góp giúp lấy ra dòng điện một chiều.</div>
+        </div>
+        
+        <div class="model-box" id="mh-mayphatdien">
+            <h3>10. Máy phát điện xoay chiều</h3>
+            <p><strong>Nguyên lý:</strong> Hiện tượng cảm ứng điện từ.</p>
+            <div class="step"><strong>Loại 1 (Rotor là cuộn dây):</strong> Quay cuộn dây trong từ trường. Dùng hai vành khuyên để lấy ra dòng điện xoay chiều.</div>
+            <div class="step"><strong>Loại 2 (Rotor là nam châm):</strong> Quay nam châm gần cuộn dây đứng yên. Phổ biến trong nhà máy điện.</div>
+            <div class="formula-box">e = -d&Phi;/dt = E₀cos(&omega;t + &phi;)  với E₀ = &omega;NBS</div>
+        </div>
+        
+        <div class="model-box" id="mh-loa">
+            <h3>11. Loa điện động</h3>
+            <p><strong>Nguyên lý:</strong> Tác dụng của lực từ lên dòng điện.</p>
+            <div class="step">Tín hiệu âm thanh (dòng điện xoay chiều) từ amply được đưa vào một cuộn dây.</div>
+            <div class="step">Cuộn dây này được gắn vào màng loa và đặt trong từ trường mạnh của nam châm.</div>
+            <div class="step">Lực từ <code>(F = BIL)</code> tác dụng lên cuộn dây, làm cuộn dây và màng loa dao động tới lui theo đúng tần số của tín hiệu.</div>
+            <div class="step">Màng loa dao động đẩy không khí, tạo ra sóng âm.</div>
+        </div>
+        
+        <div class="model-box" id="mh-danguitar">
+            <h3>12. Đàn guitar điện</h3>
+            <p><strong>Nguyên lý:</strong> Cảm ứng điện từ.</p>
+            <div class="step">Dưới mỗi dây đàn bằng kim loại có một bộ cảm biến (pickup) chứa nam châm vĩnh cửu và một cuộn dây quấn quanh.</div>
+            <div class="step">Khi gảy, dây đàn dao động trong từ trường của nam châm. Sự dao động này làm từ thông qua cuộn dây biến thiên.</div>
+            <div class="step">Một suất điện động cảm ứng xoay chiều được sinh ra trong cuộn dây, có tần số đúng bằng tần số dao động của dây đàn.</div>
+            <div class="step">Tín hiệu điện này được khuếch đại và đưa ra loa.</div>
+        </div>
+        
+        <div class="model-box" id="mh-phanhdientu">
+            <h3>13. Phanh điện từ</h3>
+            <p><strong>Nguyên lý:</strong> Dòng điện Foucault.</p>
+            <div class="step">Một đĩa kim loại dẫn điện (gắn với trục bánh xe) quay trong một từ trường mạnh do nam châm điện tạo ra.</div>
+            <div class="step">Khi đĩa quay, từ thông qua các phần của đĩa biến thiên, sinh ra các dòng điện xoáy (Foucault) trong đĩa.</div>
+            <div class="step">Theo định luật Lenxơ, các dòng điện Foucault này có tác dụng chống lại nguyên nhân sinh ra nó (chống lại chuyển động quay), tạo ra một lực hãm mạnh làm chậm bánh xe.</div>
+        </div>
+        
+        <div class="model-box" id="mh-dokimloai">
+            <h3>14. Thiết bị dò kim loại</h3>
+            <p><strong>Nguyên lý:</strong> Cảm ứng điện từ.</p>
+            <div class="step">Một cuộn dây phát được cấp dòng điện xoay chiều, tạo ra một từ trường biến thiên.</div>
+            <div class="step">Nếu có một vật kim loại ở gần, từ trường này sẽ sinh ra dòng điện Foucault trong vật kim loại đó.</div>
+            <div class="step">Dòng Foucault này lại tạo ra một từ trường biến thiên của riêng nó, ngược lại với từ trường ban đầu.</div>
+            <div class="step">Một cuộn dây thu sẽ phát hiện sự thay đổi của từ trường tổng hợp này, tạo ra tín hiệu điện và báo động.</div>
+        </div>
+
+        <div class="model-box" id="mh-phanloaidongxu">
+            <h3>15. Máy phân loại đồng xu</h3>
+            <p><strong>Nguyên lý:</strong> Dòng Foucault và kích thước vật lý.</p>
+            <div class="step">Đồng xu được thả trượt trên một đường dốc, qua các khe để phân loại theo kích thước.</div>
+            <div class="step">Sau đó, nó trượt qua một vùng có từ trường mạnh. Vì các loại kim loại khác nhau có điện trở suất khác nhau, dòng Foucault sinh ra trong chúng sẽ khác nhau.</div>
+            <div class="step">Lực hãm do dòng Foucault gây ra sẽ khác nhau, làm cho các đồng xu có chất liệu khác nhau bị lệch khỏi quỹ đạo với các góc khác nhau và rơi vào các ngăn chứa riêng.</div>
+        </div>
+        
+        <div class="model-box" id="mh-sungdientu">
+            <h3>16. Súng điện từ (Railgun)</h3>
+            <p><strong>Nguyên lý:</strong> Lực Lorentz.</p>
+            <div class="step">Hệ thống gồm hai thanh ray kim loại song song. Viên đạn (là vật dẫn điện) được đặt nối hai thanh ray.</div>
+            <div class="step">Một dòng điện cực lớn được phóng từ một thanh ray, qua viên đạn, và sang thanh ray kia.</div>
+            <div class="step">Dòng điện trong các thanh ray tạo ra một từ trường rất mạnh, vuông góc với dòng điện chạy qua viên đạn.</div>
+            <div class="step">Lực Lorentz <code>(F = BIL)</code> tác dụng lên viên đạn, gia tốc nó tới vận tốc siêu thanh dọc theo hai thanh ray.</div>
+        </div>
+        
+        <div class="model-box" id="mh-taudemtu">
+            <h3>17. Tàu đệm từ (Maglev)</h3>
+            <p><strong>Nguyên lý:</strong> Lực đẩy và lực hút từ.</p>
+            <div class="step"><strong>Hệ thống nâng:</strong> Các nam châm điện siêu dẫn trên tàu và trên đường ray được bố trí để đẩy nhau, tạo ra một lực nâng cực mạnh, nâng con tàu lên khỏi đường ray, loại bỏ ma sát.</div>
+            <div class="step"><strong>Hệ thống đẩy:</strong> Các cuộn dây trên đường ray được cấp dòng điện xoay chiều một cách tuần tự, tạo ra một "sóng từ" di chuyển. Các nam châm trên tàu sẽ bị hút và đẩy bởi sóng từ này, kéo con tàu di chuyển về phía trước.</div>
+        </div>
+        
+        <div class="model-box" id="mh-giamchantubien">
+            <h3>18. Giảm chấn từ biến</h3>
+            <p><strong>Nguyên lý:</strong> Sử dụng chất lỏng từ biến, có thể thay đổi độ nhớt khi có từ trường.</p>
+            <div class="step">Bộ giảm xóc chứa một loại dầu đặc biệt có pha các hạt sắt từ siêu nhỏ.</div>
+            <div class="step">Khi có dòng điện, từ trường tạo ra sẽ làm các hạt sắt xếp thành chuỗi, làm dầu trở nên đặc quánh lại, tăng lực cản và làm giảm xóc cứng hơn.</div>
+            <div class="step">Một máy tính sẽ điều khiển dòng điện này hàng nghìn lần mỗi giây dựa trên điều kiện mặt đường, tạo ra hệ thống treo cực kỳ êm ái và ổn định.</div>
+        </div>
+        
+        <div class="model-box" id="mh-thetu">
+            <h3>19. Đầu đọc thẻ từ</h3>
+            <p><strong>Nguyên lý:</strong> Cảm ứng điện từ.</p>
+            <div class="step">Dải băng màu đen trên thẻ tín dụng chứa vô số hạt sắt từ nhỏ li ti. Thông tin được mã hóa bằng cách từ hóa các hạt này theo các hướng khác nhau.</div>
+            <div class="step">Đầu đọc chứa một cuộn dây rất nhỏ. Khi quẹt thẻ, sự thay đổi liên tục của các vùng từ hóa trên băng từ sẽ tạo ra một từ thông biến thiên qua cuộn dây.</div>
+            <div class="step">Từ thông biến thiên sinh ra một chuỗi tín hiệu điện áp trong cuộn dây, sau đó được giải mã thành thông tin.</div>
+        </div>
+        
+        <div class="model-box" id="mh-diathan">
+            <h3>20. Đầu đọc đĩa than</h3>
+            <p><strong>Nguyên lý:</strong> Chuyển đổi dao động cơ học thành tín hiệu điện.</p>
+            <div class="step">Trên bề mặt đĩa than có các rãnh lượn sóng mã hóa sóng âm.</div>
+            <div class="step">Khi đĩa quay, một cây kim siêu nhỏ trượt trong rãnh và dao động theo hình dạng của rãnh đó.</div>
+            <div class="step">Dao động cơ học của kim được truyền đến một bộ chuyển đổi (nam châm dao động gần cuộn dây hoặc ngược lại), tạo ra tín hiệu điện cảm ứng có tần số và biên độ tương ứng với âm thanh gốc.</div>
+        </div>
+
+    </section>
+
+    <section id="mo-hinh-hat-nhan">
+        <h2>II. Vật Lý Trong Ứng Dụng Hạt Nhân</h2>
+        <div class="model-box" id="mh-khoiphoke">
+            <h3>1. Khối phổ kế</h3>
+            <p><strong>Nguyên lý:</strong> Dùng điện trường để gia tốc và từ trường để phân tách các ion có khối lượng khác nhau.</p>
+            <div class="step"><strong>Buồng ion hóa:</strong> Mẫu chất được ion hóa.</div>
+            <div class="step"><strong>Buồng gia tốc:</strong> Ion được gia tốc bởi hiệu điện thế U, có động năng <code>K = |q|U</code>.</div>
+            <div class="step"><strong>Buồng phân tích (từ trường B):</strong> Lực Lorentz bẻ cong quỹ đạo thành đường tròn. <code>(R = mv / |q|B)</code></div>
+            <div class="step"><strong>Phân tách:</strong> Từ các công thức trên, ta có <code>m/q = (R²B²) / (2U)</code>. Các ion có m/q khác nhau sẽ có bán kính R khác nhau.</div>
+        </div>
+
+        <div class="model-box" id="mh-cambienkhoi">
+            <h3>2. Cảm biến khói Ion hóa</h3>
+            <p><strong>Nguyên lý:</strong> Dòng điện tạo bởi các hạt ion hóa không khí. Khói làm gián đoạn dòng điện này.</p>
+            <div class="step">Một lượng nhỏ chất phóng xạ phát ra tia alpha.</div>
+            <div class="step">Tia alpha ion hóa không khí, tạo ra một dòng điện ion ổn định, rất nhỏ.</div>
+            <div class="step">Khi các hạt khói bay vào, chúng bám vào các ion, làm giảm mạnh dòng điện.</div>
+            <div class="step">Mạch điện tử phát hiện sự sụt giảm này và kích hoạt còi báo động.</div>
+        </div>
+        
+        <div class="model-box" id="mh-danhdauphongxa">
+            <h3>3. Chất đánh dấu phóng xạ (Y học hạt nhân)</h3>
+            <p><strong>Nguyên lý:</strong> Gắn một đồng vị phóng xạ vào một phân tử sinh học để theo dõi đường đi của nó trong cơ thể.</p>
+            <div class="step">Một đồng vị phóng xạ có chu kỳ bán rã ngắn, phát tia gamma (ví dụ, Technetium-99m) được gắn vào một hợp chất mà một cơ quan cụ thể sẽ hấp thụ.</div>
+            <div class="step">Bệnh nhân được tiêm hợp chất này.</div>
+            <div class="step">Một thiết bị dò bức xạ (gamma camera) bên ngoài cơ thể sẽ ghi lại các tia gamma phát ra, tạo thành hình ảnh về chức năng và hình dạng của cơ quan đó.</div>
+        </div>
+        
+        <div class="model-box" id="mh-cyclotron">
+            <h3>4. Máy gia tốc Cyclotron</h3>
+            <p><strong>Nguyên lý:</strong> Dùng từ trường để bẻ cong quỹ đạo và điện trường để tăng tốc hạt.</p>
+            <div class="step">Lực Lorentz đóng vai trò lực hướng tâm. <code>(R = mv / |q|B)</code></div>
+            <div class="step">Chu kỳ quay không đổi: <code>T = 2&pi;m / |q|B</code>. Tần số điện trường phải bằng tần số quay này.</div>
+            <div class="step">Động năng tăng sau mỗi lần qua khe: <code>&Delta;K = |q|U</code>.</div>
+        </div>
+        
+        <div class="model-box" id="mh-lophannunghanhan">
+            <h3>5. Lò phản ứng hạt nhân</h3>
+            <p><strong>Nguyên lý:</strong> Sử dụng phản ứng phân hạch dây chuyền có kiểm soát để tạo ra năng lượng nhiệt.</p>
+            <div class="step"><strong>Phân hạch:</strong> Một neutron chậm bắn vào hạt nhân nặng (U-235) làm nó vỡ ra, giải phóng năng lượng và 2-3 neutron mới. <code>(n + U &rarr; X + Y + k.n + &Delta;E)</code></div>
+            <div class="step"><strong>Kiểm soát:</strong> Các thanh điều khiển (Cadmium, Boron) hấp thụ neutron được dùng để điều chỉnh tốc độ phản ứng, giữ hệ số nhân neutron k=1.</div>
+            <div class="step"><strong>Sản xuất điện:</strong> Năng lượng nhiệt sinh ra được dùng để đun sôi nước, tạo ra hơi nước áp suất cao làm quay tuabin của máy phát điện.</div>
+        </div>
+    </section>
+
+    <section id="mo-hinh-nhiet-co">
+        <h2>III. Vật Lý Trong Ứng Dụng Nhiệt & Cơ</h2>
+
+        <div class="model-box" id="mh-bonnuocnong">
+            <h3>1. Bồn nước nóng năng lượng mặt trời</h3>
+            <p><strong>Nguyên lý:</strong> Hiệu ứng nhà kính để hấp thụ nhiệt và nguyên lý đối lưu để lưu thông nước.</p>
+            <div class="step"><strong>Hấp thụ nhiệt:</strong> Ánh sáng (sóng ngắn) đi qua kính, làm nóng các ống đồng sơn đen. Ống bức xạ lại nhiệt dưới dạng hồng ngoại (sóng dài) nhưng bị kính giữ lại. <code>(Q<sub>thu</sub> = P<sub>bức xạ</sub> * S * H * t)</code></div>
+            <div class="step"><strong>Đối lưu:</strong> Nước trong ống nóng lên, khối lượng riêng giảm và di chuyển lên bình chứa. Nước lạnh hơn trong bình chìm xuống, tạo thành một vòng đối lưu tự nhiên không cần bơm.</div>
+        </div>
+        
+        <div class="model-box" id="mh-hethongNLMT">
+            <h3>2. Hệ thống điện năng lượng mặt trời (Pin quang điện)</h3>
+            <p><strong>Nguyên lý:</strong> Hiện tượng quang điện trong (hiệu ứng quang-voltaic) trong các chất bán dẫn.</p>
+            <div class="step">Tấm pin được làm từ các lớp bán dẫn p-n.</div>
+            <div class="step">Khi photon ánh sáng mặt trời có năng lượng đủ lớn đập vào, nó tạo ra cặp electron-lỗ trống.</div>
+            <div class="step">Điện trường tại lớp chuyển tiếp p-n sẽ kéo các electron về lớp n và lỗ trống về lớp p, tạo ra một hiệu điện thế. Khi nối mạch ngoài, có dòng điện một chiều chạy qua.</div>
+        </div>
+        
+        <div class="model-box" id="mh-hethongthuydien">
+            <h3>3. Hệ thống thủy điện</h3>
+            <p><strong>Nguyên lý:</strong> Chuyển hóa thế năng của nước thành động năng rồi thành điện năng.</p>
+            <div class="step">Đập tích nước ở độ cao H, tạo ra thế năng. <code>(W<sub>t</sub> = mgh)</code></div>
+            <div class="step">Nước chảy xuống qua đường ống, thế năng chuyển hóa thành động năng. <code>((1/2)mv²)</code></div>
+            <div class="step">Dòng nước tốc độ cao làm quay tuabin, tuabin làm quay máy phát điện để tạo ra điện.</div>
+            <div class="step">Công suất nhà máy: <code>P = &eta;.&rho;.g.Q.H</code> (&eta; là hiệu suất, &rho; là khối lượng riêng nước, Q là lưu lượng).</div>
+        </div>
+
+        <div class="model-box" id="mh-maycatlaze">
+            <h3>4. Máy cắt Laser</h3>
+            <p><strong>Nguyên lý:</strong> Khuếch đại ánh sáng bằng phát xạ cưỡng bức để tạo ra một chùm tia năng lượng cực cao, hội tụ tại một điểm.</p>
+            <div class="step">Trong buồng cộng hưởng, các nguyên tử của môi trường hoạt chất (ví dụ: khí CO₂) được kích thích lên mức năng lượng cao.</div>
+            <div class="step">Một photon có năng lượng đúng bằng hiệu hai mức năng lượng bay qua sẽ kích thích nguyên tử phát ra một photon thứ hai giống hệt nó (cùng tần số, pha, phương truyền) - đây là phát xạ cưỡng bức.</div>
+            <div class="step">Quá trình này được lặp lại, khuếch đại số lượng photon theo cấp số nhân. Chùm tia laser thoát ra có công suất cực lớn, được hội tụ bằng thấu kính để làm nóng chảy hoặc bay hơi vật liệu tại điểm cắt.</div>
+        </div>
+        
+        <div class="model-box" id="mh-dongconhiet">
+            <h3>5. Động cơ nhiệt</h3>
+            <p><strong>Nguyên lý:</strong> Biến đổi nhiệt năng thành công cơ học thông qua một chu trình khép kín.</p>
+            <div class="step">Nhiên liệu được đốt cháy, cung cấp nhiệt lượng Q₁ cho chất giãn nở (khí).</div>
+            <div class="step">Khí giãn nở, sinh công A' đẩy piston. <code>(A' = p.&Delta;V)</code></div>
+            <div class="step">Khí nhả nhiệt lượng Q₂ cho nguồn lạnh và quay về trạng thái ban đầu.</div>
+            <div class="step">Hiệu suất: <code>H = A' / Q₁ = 1 - Q₂/Q₁</code>.</div>
+        </div>
+        
+        <div class="model-box" id="mh-bannla">
+            <h3>6. Bàn là (Bàn ủi)</h3>
+            <p><strong>Nguyên lý:</strong> Định luật Jun-Lenxơ.</p>
+            <div class="step">Dòng điện chạy qua một dây điện trở có điện trở suất cao (thường là hợp kim Niken-Crom).</div>
+            <div class="step">Theo định luật Jun-Lenxơ, điện năng được chuyển hóa hoàn toàn thành nhiệt năng, làm nóng mặt bàn là. <code>(Q = I²Rt)</code></div>
+            <div class="step">Một rơ le nhiệt (thường dùng thanh lưỡng kim) sẽ tự động ngắt mạch khi đạt đến nhiệt độ cài đặt và đóng lại khi nguội đi, giúp duy trì nhiệt độ ổn định.</div>
+        </div>
+        
+        <div class="model-box" id="mh-maysaychankhong">
+            <h3>7. Máy sấy chân không</h3>
+            <p><strong>Nguyên lý:</strong> Giảm áp suất làm giảm nhiệt độ sôi của chất lỏng.</p>
+            <div class="step">Vật cần sấy (ví dụ: thực phẩm, dược liệu) được đặt trong một buồng kín.</div>
+            <div class="step">Một máy bơm chân không sẽ hút không khí ra ngoài, làm giảm áp suất trong buồng xuống rất thấp.</div>
+            <div class="step">Ở áp suất thấp, nước có thể sôi và bay hơi ở nhiệt độ rất thấp (thậm chí ở nhiệt độ phòng).</div>
+            <div class="step">Quá trình này giúp loại bỏ nước khỏi sản phẩm mà không cần dùng nhiệt độ cao, giữ được màu sắc, hương vị và chất dinh dưỡng.</div>
+        </div>
+
+        <div class="model-box" id="mh-chungcatnuoc">
+            <h3>8. Chưng cất nước bằng năng lượng mặt trời</h3>
+            <p><strong>Nguyên lý:</strong> Bay hơi và ngưng tụ.</p>
+            <div class="step">Nước bẩn được đặt trong một khay đen (để hấp thụ nhiệt tốt) bên trong một hộp kín có nắp kính nghiêng.</div>
+            <div class="step">Năng lượng mặt trời làm nước bay hơi, để lại các chất bẩn, muối khoáng ở lại khay.</div>
+            <div class="step">Hơi nước tinh khiết bay lên, tiếp xúc với mặt trong của tấm kính lạnh hơn và ngưng tụ thành các giọt nước tinh khiết.</div>
+            <div class="step">Do nắp kính được đặt nghiêng, các giọt nước sẽ chảy xuống và được thu vào một máng chứa nước sạch.</div>
+        </div>
+        
+        <div class="model-box" id="mh-chim-uong-nuoc">
+            <h3>9. Đồ chơi chim uống nước</h3>
+            <p><strong>Nguyên lý:</strong> Cân bằng áp suất hơi và sự bay hơi làm lạnh.</p>
+            <div class="step">Con chim chứa một chất lỏng dễ bay hơi (ether hoặc dichloromethane). Phần đầu bằng nỉ xốp.</div>
+            <div class="step">Khi đầu chim ướt, nước bay hơi. Quá trình bay hơi thu nhiệt, làm lạnh phần đầu và làm giảm áp suất hơi trong đó. <code>(p<sub>đầu</sub> < p<sub>đuôi</sub>)</code>.</div>
+            <div class="step">Sự chênh lệch áp suất này đẩy chất lỏng từ phần đuôi lên đầu, làm chim nặng đầu và cúi xuống "uống nước".</div>
+            <div class="step">Khi cúi xuống, ống nối ngập trong chất lỏng, áp suất hai phần cân bằng trở lại, chất lỏng chảy về đuôi, làm chim ngẩng lên. Chu trình lặp lại.</div>
+        </div>
+        
+        <div class="model-box" id="mh-tannhietCPU">
+            <h3>10. Hệ thống tản nhiệt CPU (dùng ống dẫn nhiệt - Heat pipe)</h3>
+            <p><strong>Nguyên lý:</strong> Truyền nhiệt thông qua sự bay hơi và ngưng tụ của chất lỏng trong một ống kín, chân không.</p>
+            <div class="step">Ống đồng chứa một lượng nhỏ chất lỏng (như nước) và được hút gần chân không.</div>
+            <div class="step"><strong>Đầu nóng (tiếp xúc CPU):</strong> Nhiệt từ CPU làm chất lỏng bay hơi. <code>(Q<sub>thu</sub> = L.m)</code></div>
+            <div class="step"><strong>Truyền hơi:</strong> Hơi nóng di chuyển cực nhanh đến đầu lạnh của ống (phần có các lá tản nhiệt).</div>
+            <div class="step"><strong>Đầu lạnh:</strong> Hơi tiếp xúc với thành ống lạnh hơn, ngưng tụ lại thành lỏng và nhả ra nhiệt lượng đã lấy từ CPU. <code>(Q<sub>tỏa</sub> = L.m)</code>. Nhiệt này được các lá tản nhiệt và quạt phân tán ra không khí.</div>
+            <div class="step"><strong>Hồi lưu:</strong> Chất lỏng ngưng tụ chảy ngược về đầu nóng nhờ các rãnh mao dẫn bên trong ống, và chu trình tiếp tục. Đây là một cơ chế truyền nhiệt cực kỳ hiệu quả.</div>
+        </div>
+        
+        <div class="model-box" id="mh-mayhutam">
+            <h3>11. Máy hút ẩm</h3>
+            <p><strong>Nguyên lý:</strong> Ngưng tụ hơi nước trên một bề mặt lạnh.</p>
+            <div class="step">Quạt hút không khí ẩm trong phòng vào máy.</div>
+            <div class="step">Không khí được thổi qua một dàn lạnh (tương tự dàn lạnh của điều hòa).</div>
+            <div class="step">Khi tiếp xúc với bề mặt lạnh, hơi nước trong không khí bị làm lạnh xuống dưới điểm sương và ngưng tụ thành nước lỏng, chảy vào một khay chứa.</div>
+            <div class="step">Không khí khô và lạnh sau đó được thổi qua dàn nóng (để sấy khô và làm ấm lại một chút) trước khi được trả lại phòng.</div>
+        </div>
+        
+        <div class="model-box" id="mh-nhietkhi">
+            <h3>12. Nhiệt kế khí & Bơm khí</h3>
+            <p><strong>Nguyên lý:</strong> Sự thay đổi áp suất hoặc thể tích của một lượng khí không đổi khi nhiệt độ thay đổi.</p>
+            <div class="step"><strong>Nhiệt kế khí đẳng tích:</strong> Giữ thể tích khí không đổi (V=const). Khi nhiệt độ T thay đổi, áp suất p thay đổi theo. Thang đo nhiệt độ được chia độ theo áp suất. <code>(p/T = hằng số)</code>. Rất chính xác, thường dùng làm chuẩn.</div>
+            <div class="step"><strong>Bơm khí (xe đạp):</strong> Khi đẩy piston xuống, ta nén khí trong bơm, làm tăng áp suất. Khi áp suất trong bơm lớn hơn áp suất trong lốp xe, van một chiều sẽ mở ra và khí được đẩy vào lốp. <code>(p₁V₁ = p₂V₂)</code></div>
+        </div>
+        
+        <div class="model-box" id="mh-dotocdongchay">
+            <h3>13. Đo tốc độ dòng chảy (siêu âm)</h3>
+            <p><strong>Nguyên lý:</strong> Thời gian truyền của sóng âm bị ảnh hưởng bởi tốc độ của môi trường truyền.</p>
+            <div class="step">Hai bộ phát/thu siêu âm được đặt chéo qua đường ống.</div>
+            <div class="step">Sóng siêu âm được phát từ bộ 1 đến bộ 2 (xuôi dòng) và từ bộ 2 về bộ 1 (ngược dòng).</div>
+            <div class="step">Thời gian truyền xuôi dòng (t₁) sẽ ngắn hơn thời gian truyền ngược dòng (t₂) vì được dòng chảy "đẩy" đi. <code>(t₁ < t₂)</code></div>
+            <div class="step">Dựa vào sự chênh lệch thời gian <code>(&Delta;t = t₂ - t₁)</code>, kích thước đường ống và góc đặt cảm biến, máy có thể tính toán chính xác tốc độ dòng chảy.</div>
+        </div>
+        
+        <div class="model-box" id="mh-giam-sat-ho-hap">
+            <h3>14. Giám sát hô hấp (dùng cảm biến trở kháng)</h3>
+            <p><strong>Nguyên lý:</strong> Điện trở của lồng ngực thay đổi khi hít vào và thở ra.</p>
+            <div class="step">Hai điện cực được dán trên ngực bệnh nhân.</div>
+            <div class="step">Một dòng điện xoay chiều tần số cao, cường độ rất nhỏ và an toàn được cho chạy qua hai điện cực.</div>
+            <div class="step">Khi hít vào, lồng ngực nở ra, khoảng cách giữa hai điện cực tăng, phổi chứa đầy không khí (dẫn điện kém), làm tổng trở của lồng ngực tăng lên. Khi thở ra thì ngược lại.</div>
+            <div class="step">Sự thay đổi tuần hoàn của trở kháng này được theo dõi để giám sát nhịp thở của bệnh nhân.</div>
+        </div>
+
+    </section>
+    
+</div>
+
+</body>
+</html>
